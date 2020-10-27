@@ -1,0 +1,17 @@
+<%- include ('../partials/header')%>
+
+<form action="/categories" method="POST">
+    <div class="field">
+        <label for="name">Name</label>
+        <input type="text" name="category[name]" id="name" placeholder="Enter category name">
+    </div>
+    <div class="field">
+        <label for="description">Description</label>
+        <input type="text" name="category[description]" id="description" placeholder="Enter description">
+    </div>
+    <div class="field">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+<%- include ('../partials/footer')%>
