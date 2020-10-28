@@ -14,7 +14,7 @@ module.exports = {
     },
     createProduct: function(req, res, next) {
         Product.create(req.body.product)
-            .then(() => res.send('successfully added category'))
+            .then(() => res.send('successfully added product'))
             .catch(err => console.log(err));
     },
     show: function(req, res, next) {
