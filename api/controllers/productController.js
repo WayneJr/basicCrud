@@ -9,7 +9,7 @@ module.exports = {
     },
     new: function(req, res, next) {
         Category.find({})
-            .then(categories => res.render('product/index', {categories: categories}))
+            .then(categories => res.render('product/new', {categories: categories}))
             .catch(err => console.log(err));
     },
     createProduct: function(req, res, next) {
