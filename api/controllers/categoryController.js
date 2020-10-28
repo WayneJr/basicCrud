@@ -3,7 +3,7 @@ const Category = require('../../models/category');
 module.exports = {
     root: function(req, res, next) {
         Category.find({})
-            .then(categories => res.render('category/index', {categories: categories}))
+            .then(categories => res.json(categories))
             .catch(err => console.log(err));
     },
     new: function(req, res, next) {
@@ -34,5 +34,4 @@ module.exports = {
             .then(() => res.redirect('/categories'))
             .catch(err => console.log(err));
     }
-
 }

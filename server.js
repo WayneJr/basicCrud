@@ -8,6 +8,7 @@ const express        = require('express'),
       port           = process.env.PORT || 3000,
       dbUrl          = process.env.DATABASEURL,
       methodOverride = require('method-override'),
+      productRoutes  = require('./api/routes/product'),
       categoryRoutes = require('./api/routes/category');
 
 mongoose.connect(dbUrl, {useUnifiedTopology: true, useNewUrlParser: true})
@@ -17,5 +18,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use('/categories', categoryRoutes);
+app.use('/products', productRoutes);
 
 app.listen(port, process.env.IP, () => console.log('listening on port: ' + port));
