@@ -1,0 +1,35 @@
+<%- include ('partials/footer') %>
+
+
+<h1>Admin sign up</h1>
+<form action="/admin/register" method="post">
+    <div class="field">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="password" placeholder="Username">
+    </div>
+    <div class="field">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+    </div>
+    <div class="field">
+        <input type="submit" value="Register">
+    </div>
+</form>
+
+<h1>Admin Login</h1>
+
+<form action="/admin/login" method="post">
+    <div class="field">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="password" placeholder="Username">
+    </div>
+    <div class="field">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+    </div>
+    <div class="field">
+        <input type="submit" value="Register">
+    </div>
+</form>
+
+<%- include ('partials/footer') %>
