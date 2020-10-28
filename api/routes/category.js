@@ -1,5 +1,6 @@
 const express       = require('express'),
       router        = express.Router(),
+      authEndpoint  = require('../middleware/auth'),
       catController = require('../controllers/categoryController');
 
 router.get('/', catController.root);
