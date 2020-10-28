@@ -14,7 +14,7 @@ async function register(model, req, res, next) {
     try {
         let name = await model.findOne({username});
         if (name) {
-            return res.status(400).json({msg: `${model.modelName} doesn't exist`});
+            return res.status(400).json({msg: `${model.modelName} exists`});
         }
         name = new model({username, password});
         const salt = await bcrypt.genSalt(10);
