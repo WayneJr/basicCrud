@@ -8,9 +8,7 @@ module.exports = {
             .catch(err => console.log(err));
     },
     new: function(req, res, next) {
-        Category.find({})
-            .then(categories => res.render('product/newprod', {categories: categories}))
-            .catch(err => console.log(err));
+        res.render('product/new');
     },
     createProduct: function(req, res, next) {
         Product.create(req.body.product)
