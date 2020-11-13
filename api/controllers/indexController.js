@@ -66,7 +66,7 @@ async function login(model, req, res, next) {
 
 module.exports = {
     root: function(req, res, next) {
-        res.send('<h1>Welcome to the ecommerce api</h1>')
+        res.render('landing')
     },
     showUserRegister: function(req, res, next) {
         res.render('register');
