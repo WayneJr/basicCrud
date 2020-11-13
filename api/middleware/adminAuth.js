@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const auth = require('./auth');
-module.exports = (token, req, res, next) => {
+module.exports = (req, res, next, token) => {
     auth(req, res, next);
     jwt.verify(token, 'thekey', (err, authData) => {
         if (err) {

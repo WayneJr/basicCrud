@@ -21,19 +21,14 @@ const Admin = require('../../models/admin');
 // };
 
 module.exports = (req, res, next) => {
-    const authHeader = req.headers.authorization;
-
-    if (authHeader) {
+    const authHeader = req.headers['authorization'];
+    console.log(req.headers);
+    if (typeof authHeader !== 'undefined') {
         const token = authHeader.split(' ')[1];
+        req.token = token;
+        console.log(req.token);
+        next();
 
-        jwt.verify(token, "thesecret", (err, user) => {
-            if (err) {
-                return res.sendStatus(403);
-            }
-
-            req.user = user;
-            next();
-        });
     } else {
         res.sendStatus(401);
     }

@@ -9,15 +9,15 @@
         <label for="price">Price</label>
         <input type="text" name="product[price]" id="price" placeholder="Enter price">
     </div>
-    <div class="field">
-        <label for="category">Category</label>
-        <select name="product[category]" id="category">
-            <% categories.forEach(category => {%>
+<!--    <div class="field">-->
+<!--        <label for="category">Category</label>-->
+<!--        <select name="category" id="category">-->
+            <%# categories.forEach(category => {%>
                 <%# let catName = category.name, catId = category._id;%>
-                <option value="<%= category %>" ><%= category.name %></option>
-            <% })%>
-        </select>
-    </div>
+<!--                <option value="<%#= category %>" ><%#= category.name %></option>-->
+            <%# })%>
+<!--        </select>-->
+<!--    </div>-->
 
     <div class="field">
         <input type="submit" value="Submit">
